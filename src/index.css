@@ -11,3 +11,271 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Header styles */
+.main-header {
+  font-size: 26px;
+  min-height: 64px;
+  border-radius: 0 0 18px 18px;
+  width: 100vw;
+  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+  color: #fff;
+  padding: 0;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.08);
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+.main-header-title {
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: 1px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  user-select: none;
+}
+.main-header-github {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.main-header-github svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Main layout */
+.main-flex {
+  display: flex;
+  gap: 40px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 32px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.canvas-block {
+  width: 520px;
+  height: 520px;
+  background: linear-gradient(120deg, #f0fdfa 60%, #e0e7ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 240px;
+  margin: 0 auto;
+}
+.side-panel {
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Form styles */
+.triple-integral-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 17px;
+  width: 100%;
+  max-width: 400px;
+}
+.triple-integral-form h3 {
+  margin: 0;
+  color: #3730a3;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.triple-integral-form label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.triple-integral-form input {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1.5px solid #c7d2fe;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+.triple-integral-form button {
+  margin-top: 10px;
+  padding: 10px 0;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+/* Instruction modal */
+.instruction-modal-backdrop {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(30,41,59,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instruction-modal-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  padding: 32px;
+  max-width: 420px;
+  width: 90vw;
+  position: relative;
+}
+.instruction-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #6366f1;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .main-header {
+    font-size: 18px !important;
+    min-height: 48px !important;
+    border-radius: 0 0 14px 14px !important;
+  }
+  .main-header-title {
+    font-size: 17px !important;
+    padding: 0 12px !important;
+    height: 48px !important;
+  }
+  .main-header-github {
+    padding: 0 12px !important;
+    height: 48px !important;
+  }
+  .main-header-github svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .main-flex {
+    flex-direction: column !important;
+    gap: 18px !important;
+    padding: 10px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100vw !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+  }
+  .canvas-block {
+    width: 100vw !important;
+    height: 80vw !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    min-height: 320px !important;
+    max-height: 90vw !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  .side-panel {
+    min-width: 0 !important;
+    width: 100vw !important;
+    padding: 8px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+  .triple-integral-form {
+    font-size: 15px !important;
+    max-width: 100vw !important;
+  }
+  .triple-integral-form input {
+    font-size: 15px !important;
+    padding: 6px 7px !important;
+  }
+  .triple-integral-form button {
+    font-size: 15px !important;
+    padding: 8px 0 !important;
+  }
+  .triple-integral-form label {
+    gap: 5px !important;
+  }
+}
+@media (max-width: 600px) {
+  .main-header {
+    font-size: 15px !important;
+    min-height: 38px !important;
+    border-radius: 0 0 10px 10px !important;
+  }
+  .main-header-title {
+    font-size: 14px !important;
+    padding: 0 7px !important;
+    height: 38px !important;
+  }
+  .main-header-github {
+    padding: 0 7px !important;
+    height: 38px !important;
+  }
+  .main-header-github svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .canvas-block {
+    height: 90vw !important;
+    min-height: 220px !important;
+    max-height: 100vw !important;
+  }
+  .side-panel {
+    padding: 2px !important;
+  }
+  .triple-integral-form {
+    font-size: 13px !important;
+  }
+  .triple-integral-form input {
+    font-size: 13px !important;
+    padding: 5px 5px !important;
+  }
+  .triple-integral-form button {
+    font-size: 13px !important;
+    padding: 7px 0 !important;
+  }
+}
+html, body, #root {
+  width: 100vw !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

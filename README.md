@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# 📐 Triple Integral Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Triple Integral Visualizer** — это интерактивное веб-приложение для визуализации областей интегрирования в задачах с тройными интегралами. Проект создан для студентов, преподавателей и всех, кто изучает или преподаёт высшую математику.
 
-## Available Scripts
+![Пример визуализации](https://i.ibb.co/ZzvhnLC6/image.png)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Возможности
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Ввод произвольных границ интегрирования** по переменным x, y, z (в виде функций и чисел).
+- **Визуализация объёма** области интегрирования в 3D с помощью WebGL (Three.js).
+- **Интерактивное вращение, масштабирование и перемещение** области.
+- **Настройка плотности точек** для более детального или быстрого отображения.
+- **Показ цветных граней и контуров** для лучшего понимания формы области.
+- **Инструкция по вводу формул** (на JavaScript).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧑‍💻 Как пользоваться
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Введите пределы интегрирования:**
+   - `a`, `b` — пределы по x (числа).
+   - `g₁(x)`, `g₂(x)` — пределы по y (функции от x).
+   - `u₁(x, y)`, `u₂(x, y)` — пределы по z (функции от x и y).
+2. **Укажите плотность точек** (чем больше, тем детальнее, но медленнее).
+3. **Нажмите "Показать объем"** — область появится на 3D-сцене.
+4. **Вращайте, увеличивайте и перемещайте** область мышкой.
+5. **Используйте чекбоксы** для отображения контуров и цветных граней.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📝 Примеры ввода
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Верхняя полусфера:  
+  `u₂(x, y) = Math.sqrt(1 - x**2 - y**2)`
+- Нижняя полусфера:  
+  `u₁(x, y) = -Math.sqrt(1 - x**2 - y**2)`
+- Параболоид:  
+  `u₂(x, y) = x**2 + y**2`
+- Константа:  
+  `u₁(x, y) = 0`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> **Важно:**  
+> Все функции вводятся на JavaScript. Используйте переменные `x` и `y`.  
+> Например: `Math.sqrt(x*x + y*y)`, `Math.sin(x) + y**2`, `Math.PI/2`.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Установка и запуск
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/yourusername/triple-integral-visualizer.git
+cd triple-integral-visualizer
+npm install
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Технологии
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React** — интерфейс
+- **Three.js + @react-three/fiber** — 3D-визуализация
+- **@react-three/drei** — удобные компоненты для Three.js
+- **JavaScript** — парсинг и вычисление формул
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📚 Для чего это нужно?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Понять, как устроены области интегрирования в тройных интегралах.
+- Визуально увидеть сложные фигуры, которые описываются неравенствами.
+- Проверить себя при решении задач по высшей математике.
+- Использовать как наглядное пособие на лекциях и семинарах.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📝 Лицензия
 
-### Making a Progressive Web App
+Проект распространяется под лицензией GNU GPL v3.  
+См. файл [LICENSE](./LICENSE).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🤝 Обратная связь
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Будем рады вашим вопросам и предложениям!  
+Открывайте issues или пишите pull requests.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
